@@ -23,6 +23,10 @@ public class administracion {
         contenido.add(valores);
     }  
     
+    public void addContenidoBuscado(Integer indice, PrimerAjuste valores){
+        contenido.add(indice, valores);
+    }  
+    
     public void mostrar(){
         if(contenido.isEmpty()){
             System.out.println("La lista esta vacia");
@@ -34,4 +38,38 @@ public class administracion {
         }
     }
     
+    public Integer buscar(Integer numero)
+    {
+        int indice;
+        boolean aux=true;
+        if(contenido.isEmpty()){
+            System.out.println("La lista esta vacia");
+        }else{
+            for (int i = 0; i<contenido.size(); i++) {
+               if(contenido.get(i).getLongitud()<=numero && true)
+               {
+                   indice=i;
+                   return indice;
+               }
+            }
+        }
+        return null;
+    }
+    public Integer buscarindice(Integer numero)
+    {
+        int indice;
+        boolean aux=true;
+        if(contenido.isEmpty()){
+            System.out.println("La lista esta vacia");
+        }else{
+            for (int i = 0; i<contenido.size(); i++) {
+               if(contenido.get(i).getLongitud()<=numero && true)
+               {
+                   indice=i;
+                   return contenido.get(i).getEmpieza();
+               }
+            }
+        }
+        return null;
+    }
 }
