@@ -15,8 +15,9 @@
 -----------------------------------------------------------------
 
 ## Descripción: 
- **Tema:** Algoritmos de asignación de memoria
-**PrimerAjuste:**Consiste en asignar el primer hueco disponible que tenga un espacio suficiente para almacenar el programa.
+ **Tema:** Algoritmos de asignación de memoria.
+ 
+ Primer Ajuste:Consiste en asignar el primer hueco disponible que tenga un espacio suficiente para almacenar el programa.
  
  [Mas información ](https://es.acervolima.com/asignacion-de-primer-ajuste-en-sistemas-operativos/)
 
