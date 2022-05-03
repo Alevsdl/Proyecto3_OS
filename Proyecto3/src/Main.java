@@ -16,18 +16,26 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
         administracion admin=new administracion();
-        PrimerAjuste c1 = new PrimerAjuste('h',0,5);
-        PrimerAjuste c2 = new PrimerAjuste('p',5,3);
-        PrimerAjuste c3 = new PrimerAjuste('h',8,6);
-        Scanner r= new Scanner(System.in);
-        admin.addContenido(c1);
-        admin.addContenido(c2);
-        admin.addContenido(c3);
+         Scanner r= new Scanner(System.in);
+        // iniciacion de la memeria
+        /*
+        10 huecos (H)de memeria con espacios aleateris
+        */
+        int espacio; 
+        //numero aleatorios entre 10 y 3
+   
+        for (int i = 0; i < 10; i++) {
+            espacio = (int) (Math.random() * (10 - 3 + 1) + 3);
+            PrimerAjuste nuevo=new PrimerAjuste('h',admin.buscarindice(),espacio);
+             admin.addContenidoInicial(nuevo);
+        }
+ 
         admin.mostrar();
         
-        while(true){
+        boolean salir = true;
+        while(salir){
             System.out.println(" 1. Insertar"+"\n 2. Mostrar"+"\n 3. Salir");
             int op = r.nextInt();
             switch(op){
@@ -35,9 +43,11 @@ public class Main {
                 {
                     System.out.println("Escriba la longitud");
                     int numero= r.nextInt();
-                    
-                    PrimerAjuste nuevo=new PrimerAjuste('p',admin.buscarindice(numero),numero);
-                    admin.addContenidoBuscado(admin.buscar(numero),nuevo);
+                    // crear el nuevo espacio de memoria
+                    // tipo - inicio - longitud 
+                    PrimerAjuste nuevo=new PrimerAjuste('p',admin.buscarindice(),numero);
+                    // agrar el espacio de memerio 
+                    admin.addContenido(nuevo);
                     break;
                 }
                 case 2:
@@ -47,6 +57,7 @@ public class Main {
                 }
                 case 3:
                 {
+                    salir = false;
                     break;
                 }
                 default:
