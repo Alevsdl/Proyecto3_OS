@@ -64,6 +64,8 @@ public class interfaz extends javax.swing.JFrame {
                 jTable1.setRowHeight(i, (50 + aux));
             }
         }
+        Object[] dato = new Object[]{"       PROCESOS"};
+        modelo.addRow(dato);
     }
 
     public void actualizarTabla() {
@@ -88,6 +90,8 @@ public class interfaz extends javax.swing.JFrame {
 
             //System.out.println("Tamañoo  :"+ t.get(i));
         }
+        Object[] dato = new Object[]{"       PROCESOS"};
+        modelo.addRow(dato);
 
     }
 
@@ -110,6 +114,7 @@ public class interfaz extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         salir = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(550, 700));
@@ -236,6 +241,11 @@ public class interfaz extends javax.swing.JFrame {
         jLabel3.setOpaque(true);
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 620, 560, 80));
 
+        jLabel4.setFont(new java.awt.Font("Roboto Light", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(148, 180, 159));
+        jLabel4.setText("PRIMER AJUSTE");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 180, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 700));
 
         pack();
@@ -338,6 +348,7 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
