@@ -9,21 +9,21 @@
  */
 public class PrimerAjuste {
     
-    private char tipo;
+    private String tipo;
     private int empieza;
     private int longitud;
 
-    public PrimerAjuste(char tipo, int empieza, int longitud) {
+    public PrimerAjuste(String tipo, int empieza, int longitud) {
         this.tipo = tipo;
         this.empieza = empieza;
         this.longitud = longitud;
     }
 
-    public char getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(char tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 

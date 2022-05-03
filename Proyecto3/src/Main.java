@@ -28,7 +28,7 @@ public class Main {
    
         for (int i = 0; i < 10; i++) {
             espacio = (int) (Math.random() * (10 - 3 + 1) + 3);
-            PrimerAjuste nuevo=new PrimerAjuste('h',admin.buscarindice(),espacio);
+            PrimerAjuste nuevo=new PrimerAjuste("h",admin.buscarindice(),espacio);
              admin.addContenidoInicial(nuevo);
         }
  
@@ -45,7 +45,7 @@ public class Main {
                     int numero= r.nextInt();
                     // crear el nuevo espacio de memoria
                     // tipo - inicio - longitud 
-                    PrimerAjuste nuevo=new PrimerAjuste('p',admin.buscarindice(),numero);
+                    PrimerAjuste nuevo=new PrimerAjuste("p",admin.buscarindice(),numero);
                     // agrar el espacio de memerio 
                     admin.addContenido(nuevo);
                     break;
